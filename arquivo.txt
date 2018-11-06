@@ -1,0 +1,28 @@
+opcao=opcao
+local=local
+COMPRIMIR="comprimir"
+COPIAR="copiar"
+
+
+echo digite o local do documento.
+read local
+
+echo deseja copiar, comprimir?
+read opcao
+
+
+if test "$opcao" = "comprimir"
+then
+tar -cvzf 000.tar.gz $local
+echo Comprimindo..
+
+fi
+
+if test "opcao" = "copiar"
+then
+cp $local /Documentos/teste
+echo Copiando..
+
+fi
+
+
